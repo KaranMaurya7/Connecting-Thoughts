@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="/css/home.css">
+
+<li>
+    <div class="content">
+
+        <p>
+            <%= comment.content %>
+            <br>
+            <small>
+                <%= comment.user.name %>
+            </small>
+        </p>
+
+        <% if (locals.user && locals.user.id == comment.user.id) {%>
+            <a class="delete-comment-button" href="/comments/destroy/<%= comment.id %>"> Delete Comment </a>
+        <% } %>
+    </div>
+
+
+</li>

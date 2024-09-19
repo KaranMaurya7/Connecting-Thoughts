@@ -1,0 +1,66 @@
+* {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+
+
+body {
+  margin: 0;
+  /* text-align: center;
+  color: blue; */
+  
+}
+
+/*  CSS for header  */
+header > div{
+  margin: 2px;
+  margin-top: -2px;
+  padding: 5px 20px;
+  background-color: rgb(243, 248, 247);
+  border-radius: 5px 5px 5px 5px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  display: flex;
+  position: fixed; 
+  z-index: 3;
+  width: 97%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+}
+.active {
+  background-color: rgba(34,34,34,0.8);
+}
+
+#app-name {
+  color: rgb(0, 0, 0);
+}
+
+#user-links {
+  display: flex;
+  flex-direction: right;
+  list-style-type: none;
+}
+
+.links {
+  margin-left: 20px;
+  font-size: large;
+  padding: 0 3px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+/* footer  */
+footer {
+  position: fixed;
+  top: 90%;
+  left: 0.5%;
+
+  width: 98%;
+  font-size: larger;
+  padding: 10px 10px;
+  background-color: rgb(194, 194, 199);
+  margin: auto;
+  border-radius: 5px;
+}
+

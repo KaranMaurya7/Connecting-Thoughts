@@ -1,0 +1,31 @@
+<header>
+    <div class="">
+
+        <h1 id="app-name">Connecting Thought</h1>
+        
+        <ul id = "user-links">
+            <% if (locals.user) { %>
+                
+                <li>
+                <a class="links" href="/users/profile/<%= user.id %>">
+                    <%= user.name %>
+                </a>
+              
+            </li>
+            <li>
+                <a class="links" href="/users/sign-out">Sign Out</a>
+            </li>
+
+        <% }else { %>
+
+            <li>
+                <a class="links" href="/users/sign-in">Sign In</a>
+            </li>
+            <li>
+                <a class="links" href="/users/sign-up">Sign Up</a>
+            </li>
+            
+            <%}%>
+        </ul>
+    </div>
+</header>

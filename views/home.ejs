@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="/css/home.css">
+
+<div id="home-container">
+    <section id="feed-posts">
+        <h1>Posts</h1>
+        <% if (locals.user) {%>
+        <form action="/posts/create" id="new-post-form" method="POST">
+            <textarea name="content" cols="30" rows="3" placeholder="Type here..." required ></textarea>
+            <input type="submit" value="Post">
+        </form>
+        <% } %>
+    
+        <div id="post-list-container">
+            <ul class="post">
+                <% for (post of posts){ %>
+                <%- include('_post') -%>
+                <% } %>
+            </ul>
+        </div>
+    </section>
+    
+    <section id = "user-friends">
+       
+        <h1>Friends</h1>
+       
+        <div>
+            <% for (u of all_users) { %>
+                <p class="friends">
+                    <a href="/users/profile/<%= u.id %>"><%= u.name %></a>
+                </p>
+            <% } %>
+        </div>
+    
+    </section>
+</div>
+
+<script src="/js/home_post.js"></script>
